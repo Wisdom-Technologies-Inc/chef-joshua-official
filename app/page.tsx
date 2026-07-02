@@ -6,6 +6,8 @@ import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Clients from "./components/Clients";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Skills />
       <Portfolio />
       <Clients />
+      <Contact />
+      <Footer />
     </>
   );
 }
