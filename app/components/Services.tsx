@@ -1,59 +1,72 @@
 import {
   FaUtensils,
+  FaCakeCandles,
   FaChampagneGlasses,
-  FaClipboard,
+  FaClipboardList,
   FaUsers,
   FaKitchenSet,
   FaUserGraduate,
   FaBellConcierge,
-  FaCakeCandles,
 } from "react-icons/fa6";
 
 const services = [
   {
-    icon: <FaUtensils size={28} />,
-    title: "Private Dining",
+    icon: FaUtensils,
+    title: "Private Dining Experiences",
+    description:
+      "Exclusive dining experiences tailored to create unforgettable moments.",
   },
   {
-    icon: <FaChampagneGlasses size={28} />,
-    title: "Fine Dining",
-  },
-  {
-    icon: <FaBellConcierge size={28} />,
-    title: "Catering Services",
-  },
-  {
-    icon: <FaClipboard size={28} />,
-    title: "Menu Development",
-  },
-  {
-    icon: <FaCakeCandles size={28} />,
+    icon: FaCakeCandles,
     title: "Pastry & Desserts",
+    description:
+      "Elegant handcrafted pastries and desserts made with creativity and precision.",
   },
   {
-    icon: <FaKitchenSet size={28} />,
+    icon: FaChampagneGlasses,
+    title: "Special Events & Celebrations",
+    description:
+      "Luxury culinary experiences for weddings, anniversaries and private events.",
+  },
+  {
+    icon: FaClipboardList,
+    title: "Menu Development",
+    description:
+      "Custom menus designed to match your event and culinary vision.",
+  },
+  {
+    icon: FaBellConcierge,
+    title: "Catering Services",
+    description:
+      "Premium catering with exceptional presentation and world-class service.",
+  },
+  {
+    icon: FaKitchenSet,
     title: "Kitchen Management",
+    description:
+      "Professional kitchen operations focused on quality and efficiency.",
   },
   {
-    icon: <FaUsers size={28} />,
+    icon: FaUsers,
     title: "Culinary Consulting",
+    description:
+      "Expert advice for restaurants, hospitality businesses and culinary projects.",
   },
   {
-    icon: <FaUserGraduate size={28} />,
-    title: "Staff Training",
+    icon: FaUserGraduate,
+    title: "Staff Training & Mentorship",
+    description:
+      "Developing culinary professionals through leadership and practical training.",
   },
 ];
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="bg-black py-24"
-    >
+    <section id="services" className="bg-[#0d0d0d] py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
+        {/* Heading */}
         <div className="text-center mb-16">
-
           <p className="uppercase tracking-[4px] text-[#C8A04D]">
             Our Services
           </p>
@@ -62,36 +75,41 @@ export default function Services() {
             Exceptional Culinary Services
           </h2>
 
-          <p className="text-gray-400 mt-6 max-w-3xl mx-auto leading-8">
-            From intimate private dinners to luxury events,
-            every experience is carefully crafted with passion,
-            creativity, and exceptional hospitality.
+          <p className="text-gray-400 max-w-3xl mx-auto mt-6 leading-8">
+            Every experience is thoughtfully designed to deliver exceptional
+            cuisine, refined hospitality, and unforgettable memories.
           </p>
-
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Cards */}
+        <div className="grid lg:grid-cols-2 gap-6">
 
-          {services.map((service) => (
+          {services.map((service, index) => {
+            const Icon = service.icon;
 
-            <div
-              key={service.title}
-              className="group bg-[#111111] rounded-3xl p-8 border border-[#C8A04D]/20 hover:border-[#C8A04D] hover:-translate-y-2 transition-all duration-300"
-            >
+            return (
+              <div
+                key={index}
+                className="group flex items-start gap-5 rounded-2xl border border-[#C8A04D]/10 bg-[#111] p-7 hover:border-[#C8A04D] transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#C8A04D]/10 group-hover:bg-[#C8A04D] transition-all duration-300">
+                  <Icon className="text-2xl text-[#C8A04D] group-hover:text-black transition-all duration-300" />
+                </div>
 
-              <div className="text-[#C8A04D] mb-6">
-                {service.icon}
+                {/* Content */}
+                <div>
+                  <h3 className="text-2xl font-semibold text-white mb-2">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-400 leading-7">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-
-              <h3 className="text-white text-xl font-semibold mb-4">
-                {service.title}
-              </h3>
-
-              <div className="w-12 h-[2px] bg-[#C8A04D] group-hover:w-24 transition-all duration-300"></div>
-
-            </div>
-
-          ))}
+            );
+          })}
 
         </div>
 

@@ -1,55 +1,84 @@
 import Image from "next/image";
 
 const clients = [
-  "/images/client1.png",
-  "/images/client2.png",
-  "/images/client3.png",
-  "/images/client4.png",
-  "/images/client5.png",
-  "/images/client6.png",
+  "/images/image1.png",
+  "/images/image2.png",
+  "/images/image4.png",
+  "/images/image5.png",
+  "/images/image6.png",
+  "/images/image7.png",
+  "/images/image8.png",
+  "/images/image9.png",
+  "/images/image10.png",
+  "/images/image11.png",
+  "/images/image12.png",
 ];
 
 export default function Clients() {
   return (
     <section
       id="clients"
-      className="bg-[#0D0D0D] py-24"
+      className="bg-black py-24"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
-        <div className="text-center mb-16">
+        {/* Heading */}
+
+        <div className="text-center mb-20">
 
           <p className="uppercase tracking-[4px] text-[#C8A04D]">
-            Our Clients
+            Our Happy Customers
           </p>
 
           <h2 className="text-5xl font-bold text-white mt-4">
-            Trusted By Our Valued Clients
+            Trusted By Leading Hospitality Brands
           </h2>
 
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Dining with Chef Joshua is proud to serve private clients,
-            hospitality partners, corporate organizations,
-            and special events with professionalism and excellence.
+          <p className="text-gray-400 mt-6 max-w-3xl mx-auto leading-8">
+            Dining With Chef Joshua has proudly collaborated with
+            restaurants, lounges, hotels, and hospitality brands,
+            delivering unforgettable culinary experiences.
           </p>
 
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        {/* Logos */}
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 
           {clients.map((logo, index) => (
 
             <div
               key={index}
-              className="bg-[#111] rounded-2xl p-6 flex items-center justify-center border border-[#C8A04D]/20 hover:border-[#C8A04D] transition"
+              className="
+                group
+                bg-[#111111]
+                rounded-3xl
+                p-8
+                border
+                border-white/5
+                hover:border-[#C8A04D]
+                hover:shadow-[0_0_25px_rgba(200,160,77,0.35)]
+                transition-all
+                duration-500
+                flex
+                items-center
+                justify-center
+                h-44
+              "
             >
 
               <Image
                 src={logo}
                 alt={`Client ${index + 1}`}
-                width={120}
-                height={80}
-                className="object-contain grayscale hover:grayscale-0 transition"
+                width={170}
+                height={100}
+                className="
+                  object-contain
+                  transition-transform
+                  duration-500
+                  group-hover:scale-110
+                "
               />
 
             </div>

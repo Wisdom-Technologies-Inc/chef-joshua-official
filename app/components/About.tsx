@@ -13,7 +13,7 @@ export default function About() {
           <div className="relative h-[550px] rounded-3xl overflow-hidden">
 
             <Image
-              src="/images/chef.jpg"
+              src="/images/hero-dish.jpg.png"
               alt="Chef Joshua"
               fill
               className="object-cover"
