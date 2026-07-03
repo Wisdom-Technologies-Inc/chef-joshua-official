@@ -8,7 +8,6 @@ import Skills from "./components/Skills";
 import Mission from "./components/Mission";
 import Philosophy from "./components/Philosophy";
 import Journey from "./components/Journey";
-import Clients from "./components/Clients";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -25,7 +24,6 @@ export default function Home() {
       <Mission />
       <Philosophy />
       <Journey />
-      <Clients />
       <Contact />
       <Footer />
     </>
