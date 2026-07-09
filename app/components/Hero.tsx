@@ -129,7 +129,7 @@ export default function Hero() {
 
               {
               <Image
-                src="/images/hero-page.png"
+                src="/images/joshua.png"
                 alt="Chef Joshua"
                 fill
                 className="object-cover"

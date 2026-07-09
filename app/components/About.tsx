@@ -10,10 +10,10 @@ export default function About() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          <div className="relative h-[550px] rounded-3xl overflow-hidden">
+          <div className="relative h-[550px]  rounded-3xl overflow-hidden">
 
             <Image
-              src="/images/hero-dish.jpg.png"
+              src="/images/image1.jpeg"
               alt="Chef Joshua"
               fill
               className="object-cover"
