@@ -117,11 +117,7 @@ export default function Hero() {
 
                 </h3>
 
-                <p className="text-gray-500 mt-4">
-
-                  Professional Portrait
-
-                </p>
+               
 
               </div>
 
